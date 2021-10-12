@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: auto;
+  max-width: 38rem;
+  padding: 2rem; */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: rgb(1, 30, 34); */
+  background: url('../assets/img/cover3.jpg');
+  backdrop-filter: brightness(50%);
+  font-family: 'Poppins', sans-serif;
+}
+
+.welcome-box {
+  position: relative;
+  min-width: 450px;
+  min-height: 300px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  background: rgb(1, 30, 34);
+}
+
+.welcome-box::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: cornsilk;
+  z-index: -1;
+}
+.welcome-box::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: cornsilk;
+  z-index: -2;
+  filter: blur(60px);
+}
+
+.welcome-box::before,
+.welcome-box::after {
+  background: linear-gradient(235deg, #00f195, cornsilk, #04a6e6);
+  animation: animate 6s linear infinite;
+}
+@keyframes animate{
+  0% {
+    background: linear-gradient(235deg, #00f195, cornsilk, #04a6e6);
+  }
+  25% {
+    background: linear-gradient(305deg, #04a6e6 , cornsilk, #00f195);
+  }
+  50% {
+    background: linear-gradient(45deg, #00f195, cornsilk, #04a6e6);
+  }
+  75% {
+    background: linear-gradient(145deg, #04a6e6 , cornsilk, #00f195);
+  }
+  100% {
+    background: linear-gradient(235deg, #00f195, cornsilk, #04a6e6);
+  }
+}
+
+.headline {
+  padding: 20px;
+  box-sizing: border-box;
+  color: azure;
+  align-self: center;
+  text-align: center;
+  vertical-align: middle;
+  display: inline;
+}
+
+.headline h3, h2, h1{
+  text-decoration: none;
+  color: azure;
+  background: linear-gradient(120deg, #00ffd5, #0146c5);
+  font-family: 'Poppins';
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  margin: 0%;
+}
+
+.explore-btn {
+  /* width: 60px;
+  height: 60px;
+  background: coral;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: crosshair;
+  border-radius: 50%; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.welcome-box .explore-btn {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background-color:transparent;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -5%);
+}
+
+.explore-btn a {
+  font-size: 80px;
+  color: white;
+}
+
+.welcome-box .favicon {
+  position: relative;
+  width: 100px;
+  height: 100%;
+  background-color:transparent;
+  left: 50%;
+  right: 50%;
+}
+
+.favicon img{
+  max-width: 60px;
+  height: 100%;
+}
