@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/keypad.css">
+    <link rel="stylesheet" href="css/keyboard.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="assets/fontawesome/js/all.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <div class="login-box shadow-lg">
+      <div class="logo"><h1>MakerMate</h1></div>
+      <div class="title">Login</div>
+      <div class="form">
+          <form action="" method="post">
+              <div class="email">
+                  <input class="use-keyboard-input shadow" type="email" name="email" id="email" placeholder="Email address">
+              </div>
+              <div class="passcode">
+                  <input class="use-keyboard-input shadow" type="password" name="passcode" id="passcode" placeholder="Passcode">
+              </div>
+              <a class="btn btn-primary btn-md shadow" href="dashboard.html" role="button">Login</a>
+          </form>
+      </div>
+      <div class="info-box">
+          Hello user!<br>
+          You can use this authenticated channel to pickup your pre-ordered component package.<br>
+          Logout from the session and explore the items in Maker Space.
+      </div>
+    </div>
+    <!-- <input class="use-keyboard-input" type="text" name="text" id=""> -->
+    <!-- <textarea class="use-keyboard-input" style="position: absolute; top: 130px; right: 30px; width: 300px;"></textarea> -->
+  </body>
+  <script src="js/keyboard.js"></script>
+  <script src="js/keypad.js"></script>
+</html>
