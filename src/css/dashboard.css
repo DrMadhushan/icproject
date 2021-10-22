@@ -1,0 +1,20 @@
+.package {
+    max-width: 100%;
+    min-height: fit-content;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 5px;
+}
+
+.package a {
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.collection {
+    margin-top: 100px;
+}
+

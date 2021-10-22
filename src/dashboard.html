@@ -7,33 +7,66 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <script src="assets/fontawesome/js/all.js"></script>
     <script src="assets/bootstrap/js/bootstrap.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-light bg-info">
+    <nav class="navbar navbar-light bg-info d-flex justify-content-lg-between fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand p-2 logo" href="#">
+        <a class="navbar-brand p-2 logo" href="login.html">
           <img src="assets/img/favicon.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
           Maker Mate 
         </a>
+        <div class="d-flex navbar-brand p-2">
+          <div class="profile"> Name</div> 
+          <img src="assets/img/favicon.png" width="30" height="30" class="d-inline-block align-text-top">
+        </div>
       </div>
     </nav>
-    <div class="shadow p-1 m-lg-5 row">
-      <div class="col col-auto shadow-sm p-1 return-section m-1 ">
-        <div class="m-2 bg-success">fadfas</div>
+    <div class="shadow p-1 row collection" style="margin: 100px;">
+      <div class="col shadow-sm p-1 return-section m-1 ">
+        <div class="m-2 h5"><i class="fas fa-exchange-alt"></i> Packages to return</div>
       </div>     
       <div class="col-sm-6 shadow-sm p-1 pickup-section m-1">
-        <div class="m-2">fadfas</div>
-        <div class="m-2">fadfas</div>
-        <div class="m-2">fadfas</div>
-        <div class="m-2">fadfas</div>
-        <div class="m-2">fadfas</div>
+        <div class="m-2 h5"><i class="fas fa-hand-holding-heart"></i> Packages to pickup</div>
+
+        <div class="m-2">
+          <div class="package shadow-sm">
+            <div>Package 1</div>
+            <div>ID</div>
+            <div>Available</div>
+            <div class="justify-content-end align-items-right" style="text-align: end;">
+              <a class="btn btn-primary shadow-sm btn-sm mt-2" href="package.html" role="button"><i class="fas fa-arrow-circle-down"></i> Pickup</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="m-2">
+          <div class="package shadow-sm">
+            <div>Package 1</div>
+            <div>ID</div>
+            <div>Available</div>
+            <div class="justify-content-end align-items-right" style="text-align: end;">
+              <a class="btn btn-primary shadow-sm btn-sm mt-2" href="#" role="button"><i class="fas fa-arrow-circle-down"></i> Pickup</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="m-2">
+          <div class="package shadow-sm">
+            <div>Package 1</div>
+            <div>ID</div>
+            <div>Available</div>
+            <div class="justify-content-end align-items-right" style="text-align: end;">
+              <a class="btn btn-primary shadow-sm btn-sm mt-2" href="#" role="button"><i class="fas fa-arrow-circle-down"></i> Pickup</a>
+            </div>
+          </div>
+        </div>
       </div>      
     </div>
 
-    <div class="shadow p-1 m-lg-5 row">
-      
     </div>
+    
   </body>
 </html>
