@@ -10,16 +10,17 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <script src="assets/fontawesome/js/all.js"></script>
     <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <script src="js/dashboard.js"></script>
   </head>
-  <body>
+  <body onload="initDash()">
     <nav class="navbar navbar-light bg-info d-flex justify-content-lg-between fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand p-2 logo" href="login.html">
           <img src="assets/img/favicon.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
           Maker Mate 
         </a>
-        <div class="d-flex navbar-brand p-2">
-          <div class="profile"> Name</div> 
+        <div class="d-flex navbar-brand p-2" id="nav_profile">
+          <div class="profile"><i>Loading... </i> </div> 
           <img src="assets/img/favicon.png" width="30" height="30" class="d-inline-block align-text-top">
         </div>
       </div>
