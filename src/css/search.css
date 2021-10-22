@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: auto;
+  max-width: 38rem;
+  padding: 2rem; */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-box {
+  position: relative;
+  min-width: 450px;
+  min-height: 300px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
+  text-align: center;
+
+  background: rgb(255, 255, 255);
+  border: black;
+  border-width: 3px;
+  box-shadow: black 2em;
+  position: fixed;
+  top: 50px;
+  right: auto;
+  left: auto;
+}
+
+.login-box .logo {
+  justify-self: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.login-box .logo h1, h2, h3 {
+  margin: 0;
+  margin-top: 10px;
+  background: linear-gradient(120deg, #00ffd5, #0146c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form input {
+  width: 500px; 
+  height: 40px; 
+  font-size: large; 
+  border-radius: 20px;
+  border-color: rgb(0, 150, 187);
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form a {
+  width: 500px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.info-box {
+  margin-top: 50px;
+  height: 120px;
+  width: 600px;
+  text-align: justify;
+  padding: 10px;
+  border-left: rgb(0, 150, 187) solid;
+  border-width: 3px;
+  margin-bottom: 10px;
+
+  /* margin-top: 50px;
+  height: 150px;
+  /* width: 100%; */
+  /* background: transparent;
+  text-align: left;
+  padding: 10px;
+
+  border: 2px solid transparent; */
+  
+  /* -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%); */
+  /* -webkit-border-image: -webkit-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+  border: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%); */
+
+  /* border-image-slice: 1;  */
+}
+
+.item-title a {
+    text-decoration: none;
+    color: rgb(0, 150, 187);
+}
