@@ -111,7 +111,7 @@ body {
 
 .welcome-box .explore-btn {
   position: relative;
-  width: 200px;
+  /* width: 200px; */
   height: 100px;
   background-color:transparent;
   left: 50%;
@@ -120,8 +120,9 @@ body {
 }
 
 .explore-btn a {
-  font-size: 80px;
+  /* font-size: 60px; */
   color: white;
+  text-decoration: none;
 }
 
 .welcome-box .favicon {
