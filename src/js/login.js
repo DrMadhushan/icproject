@@ -47,7 +47,7 @@ function userLogin() {
     }
 
     // authenticate using api
-    let api_host = 'http://127.0.0.1:8000/api'
+    let api_host = 'http://127.0.0.1:8000/api';
     // var apiLoginRoute = "https://" + "www.makerspace.com/api/user/login";
     // var dummy = 'https://jsonplaceholder.typicode.com/todos/1';
 
@@ -65,10 +65,10 @@ function userLogin() {
         dict = JSON.parse(xhr.response);
         console.log(dict);
         info.innerHTML = "Fetched!<br>" + xhr.response;
-        sessionStorage.setItem('user_token', dict.token);
         if (xhr.status == 200){
             console.log("Status = 200 OK");
             sessionStorage.setItem('user_token', dict.token);
+            sessionStorage.setItem('user_email', email.value);
             window.location.href = 'dashboard.html';
         }
         
