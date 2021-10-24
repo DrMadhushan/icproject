@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <title>Verify</title>
-    <link rel="stylesheet" href="css/keypad.css">
     <link rel="stylesheet" href="css/keyboard.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
@@ -11,6 +10,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="assets/fontawesome/js/all.js"></script>
     <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <script src="js/package.js"></script>
+    <script src="js/otpverify.js"></script>
   </head>
   <body>
     <div class="login-box shadow-lg">
@@ -21,17 +22,17 @@
               <div class="passcode">
                   <input class="use-keyboard-input shadow" type="password" name="passcode" id="passcode" placeholder="Enter OTP here">
               </div>
-              <a class="btn btn-success btn-md shadow" href="dashboard.html" role="button"><i class="fas fa-lock-open"></i> Unlock</a>
-          </form>
+              <a class="btn btn-success btn-md shadow" onclick="verify()" role="button"><i class="fas fa-lock-open"></i> Unlock</a>
+              <div>Not recieved? <a onclick="sendOTP()" style="cursor: pointer; color: rgb(6, 120, 250);"> Resend OTP</a></div>
+            </form>
       </div>
       <div class="info-box">
           Hello user!<br>
-          Open your Maker app in your mobile and check your new "One Time Pincode" and enter it here to unlock the locker.
+          Open your Maker app in your mobile and check your new "One Time Passcode" and enter it here to unlock the locker.
       </div>
     </div>
     <!-- <input class="use-keyboard-input" type="text" name="text" id=""> -->
     <!-- <textarea class="use-keyboard-input" style="position: absolute; top: 130px; right: 30px; width: 300px;"></textarea> -->
   </body>
   <script src="js/keyboard.js"></script>
-  <script src="js/keypad.js"></script>
 </html>
