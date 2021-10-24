@@ -13,6 +13,7 @@
     <script src="js/dashboard.js"></script>
   </head>
   <body onload="initDash()">
+
     <nav class="navbar navbar-light bg-info d-flex justify-content-lg-between fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand p-2 logo" href="login.html">
@@ -20,57 +21,25 @@
           Maker Mate 
         </a>
         <div class="d-flex navbar-brand p-2" id="nav_profile">
-          <!-- <div class="profile"><i>Loading... </i> </div>  -->
           <img src="assets/img/user-default-avatar.png" width="30" height="30" class="d-inline-block align-text-top">
         </div>
       </div>
     </nav>
+
     <div class="shadow p-1 row collection" style="margin: 100px;">
-      <div class="col shadow-sm p-1 return-section m-1 ">
-        <div class="m-2 h5"><i class="fas fa-exchange-alt"></i> Packages to return</div>
-      </div>     
-      <div class="col-sm-6 shadow-sm p-1 pickup-section m-1">
-        <div class="m-2 h5"><i class="fas fa-hand-holding-heart"></i> Packages to pickup</div>
+      
+      <div class="col-sm-5 shadow-sm p-1 pickup-section m-1" id="return_package_collection"></div>
+      <div class="col shadow-sm p-1 pickup-section m-1" id="pickup_package_collection"></div>
 
-        <div class="m-2">
-          <div class="package shadow-sm">
-            <div>Package 1</div>
-            <div>ID</div>
-            <div>Available</div>
-            <div class="justify-content-end align-items-right" style="text-align: end;">
-              <a class="btn btn-primary shadow-sm btn-sm mt-2" href="package.html" role="button"><i class="fas fa-arrow-circle-down"></i> Pickup</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="m-2">
-          <div class="package shadow-sm">
-            <div>Package 1</div>
-            <div>ID</div>
-            <div>Available</div>
-            <div class="justify-content-end align-items-right" style="text-align: end;">
-              <a class="btn btn-primary shadow-sm btn-sm mt-2" href="#" role="button"><i class="fas fa-arrow-circle-down"></i> Pickup</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="m-2">
-          <div class="package shadow-sm">
-            <div>Package 1</div>
-            <div>ID</div>
-            <div>Available</div>
-            <div class="justify-content-end align-items-right" style="text-align: end;">
-              <a class="btn btn-primary shadow-sm btn-sm mt-2" href="#" role="button"><i class="fas fa-arrow-circle-down"></i> Pickup</a>
-            </div>
-          </div>
-        </div>
-      </div>     
+         
       <div class="logout justify-content-center align-items-center m-1 mb-3" style="text-align: center;">
-        <a class="btn btn-danger shadow-sm btn-sm mt-2 w-50" onclick="logout()" role="button"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        <a class="btn btn-danger shadow-sm btn-sm mt-2 w-50" onclick="logout(null)" role="button"><i class="fas fa-sign-out-alt"></i> Logout</a>
       </div> 
     </div>
 
     </div>
+
+    <div id="item_view"></div>
     
   </body>
 </html>
