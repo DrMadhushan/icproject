@@ -16,7 +16,7 @@ function initPackageView(){
     xhr.setRequestHeader('Authorization', 'Bearer ' + token);
     xhr.send();
     xhr.onload = () => {  
-        console.log("In package.html");  
+        console.log("In package.html");
         let package = JSON.parse(xhr.response);
         console.log(package);  
         package_block.innerHTML = 
@@ -35,6 +35,17 @@ function initPackageView(){
 }
 
 function sendOTP(){
-    
-    href="otpverify.html"
+    /*
+    let otp_req = 'http://127.0.0.1:8000/api/auth/user/orders/' + sessionStorage.getItem('req_package_id') + '/otp';
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', otp_req);
+    xhr.setRequestHeader('Authorization', 'Bearer ' + sessionStorage.getItem('user_token'));
+    xhr.send();
+    xhr.onload = () => {  
+        console.log(xhr.response);
+        // window.location.href = 'otpverify.html';
+    }
+    */
+    window.location.href = 'otpverify.html';
 }
+
