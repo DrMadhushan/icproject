@@ -48,8 +48,6 @@ function userLogin() {
 
     // authenticate using api
     let api_host = 'http://127.0.0.1:8000/api';
-    // var apiLoginRoute = "https://" + "www.makerspace.com/api/user/login";
-    // var dummy = 'https://jsonplaceholder.typicode.com/todos/1';
 
     let xhr = new XMLHttpRequest();
     let url = api_host + '/auth/login';
@@ -64,7 +62,7 @@ function userLogin() {
     xhr.onload = () => {
         dict = JSON.parse(xhr.response);
         console.log(dict);
-        info.innerHTML = "Fetched!<br>" + xhr.response;
+        // info.innerHTML = "Fetched!<br>" + xhr.response;
         if (xhr.status == 200){
             console.log("Status = 200 OK");
             sessionStorage.setItem('user_token', dict.token);
