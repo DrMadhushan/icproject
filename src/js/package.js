@@ -21,7 +21,7 @@ function initPackageView(){
         console.log(package);  
         package_block.innerHTML = 
         `
-            <div>Package ID MSPKG${package.id}</div>
+            <div class="text-success"><h4>Package ID MSPKG${package.id}</h4></div>
             <div>Order placed on ${package.ordered_date}</div>
             <div>Please return on or before ${package.due_date_to_return}</div>
         `;
@@ -30,22 +30,43 @@ function initPackageView(){
         } else if (package.status == 'pickedup'){
             package_block.innerHTML += `<div>Now you can return the package to the locker</div>`;
         }
+        console.log("components");
+        let itemList = package.component_items
+        console.log(typeof itemList);
+        package_block.innerHTML += `<div class="h5 pt-2">Package Content</div>`;
+        for (const itemId in itemList){
+            // console.log(itemList[itemId]);
+            console.log(itemList[itemId]['title']);
+            console.log(itemList[itemId]['brand']);
+            console.log(itemList[itemId]['productCode']);
+            package_block.innerHTML += `
+            <div class="p-2">
+                <div class="text-success">Product Code: ${itemList[itemId]['productCode']}</div>
+                <div class="text-success">${itemList[itemId]['title']}</div>
+                <div class="text-success">${itemList[itemId]['brand']}</div>
+            </div>
+            `;
+        }
+        // for (item in )
+        // package_block.innerHTML += `
+        // <div></div>
+        // `;
         
     }
 }
 
 function sendOTP(){
-    /*
     let otp_req = 'http://127.0.0.1:8000/api/auth/user/orders/' + sessionStorage.getItem('req_package_id') + '/otp';
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', otp_req);
+    xhr.open('GET', otp_req);
     xhr.setRequestHeader('Authorization', 'Bearer ' + sessionStorage.getItem('user_token'));
     xhr.send();
     xhr.onload = () => {  
         console.log(xhr.response);
-        // window.location.href = 'otpverify.html';
+        sessionStorage.setItem('otp', xhr.response);
+        window.location.href = 'otpverify.html';
     }
-    */
-    window.location.href = 'otpverify.html';
+    
+    //window.location.href = 'otpverify.html';
 }
 
