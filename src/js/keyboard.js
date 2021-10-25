@@ -73,7 +73,7 @@ const Keyboard = {
         keyLayout.push( ...keys, ...["backspace"], 
                         ...row1, 
                         ...["caps"], ...row2, ...["enter"], 
-                        ...row3, ...[",", ".", "@", "space", "done"]);
+                        ...row3, ...["_", ".", "@", "space", "done"]);
         console.log(keyLayout);
         /*const keyLayout = [
             "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "backspace",
