@@ -1,3 +1,11 @@
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 const Keyboard = {
     elements: {
         main: null,
@@ -43,13 +51,38 @@ const Keyboard = {
 
     _createKeys() {
         const fragment = document.createDocumentFragment();
-        const keyLayout = [
+        let keys = new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "0");
+        let row1 = new Array("q", "w", "e", "r", "t", "y", "u", "i", "o", "p");
+        let row2 = new Array("a", "s", "d", "f", "g", "h", "j", "k", "l");
+        let row3 = new Array("z", "x", "c", "v", "b", "n", "m");
+        shuffle(keys);
+        //shuffle(row1);
+        shuffle(row2);
+        shuffle(row3);
+        /*
+        keys = keys.concat(["backspace"]);
+        keys = keys.concat(row1);
+        keys = keys.concat(["caps"]);
+        keys = keys.concat(row2);
+        keys = keys.concat(["enter"]);
+        keys = keys.concat(row3);
+        keys = keys.concat([",", ".", "@", "space", "done"]);
+        */
+        const keyLayout = [];
+        //keyLayout = keys + ["backspace"] + row1 + ["caps"] + row2 + ["enter"] + row3 + [",", ".", "@", "space", "done"];
+        keyLayout.push( ...keys, ...["backspace"], 
+                        ...row1, 
+                        ...["caps"], ...row2, ...["enter"], 
+                        ...row3, ...[",", ".", "@", "space", "done"]);
+        console.log(keyLayout);
+        /*const keyLayout = [
             "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "backspace",
             "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
             "caps", "a", "s", "d", "f", "g", "h", "j", "k", "l", "enter",
             "z", "x", "c", "v", "b", "n", "m", ",", ".", "@",
             "space", "done"
-        ];
+        ];*/
+        // shuffle(keyLayout);
 
         // Creates HTML for an icon
         const createIconHTML = (icon_name) => {
