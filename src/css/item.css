@@ -1,0 +1,11 @@
+.overlay {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+}
