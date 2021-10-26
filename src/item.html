@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <script src="assets/fontawesome/js/all.js"></script>
     <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <script src="js/search.js"></script>
   </head>
-  <body onload="initItemView()">
-    <!-- Navigate to previous page -->
-    <div class="back">
-        <div class="h1">
-            <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
-        </div>
-    </div>
-    
+  <body onload="loadItem()">       
     <div class="container" id="">
+        <!-- Navigate to previous page -->
+        <div class="logout d-flex justify-content-center align-items-center m-1 mb-3" style="text-align: center;" id="logout_block">
+            <a class="btn btn-secondary shadow-sm btn-sm mt-2 m-2 w-50" href="search_results.html" role="button"><i class="fas fa-arrow-left"></i> Back to results</a>
+            <!-- <a class="btn btn-danger shadow-sm btn-sm mt-2 m-2 w-50" onclick="logout()" role="button"><i class="fas fa-sign-out-alt"></i> Logout</a> -->
+        </div>
+        <div class="overlay"></div>
         <div class="row shadow p-4" id='item-details'>
             <!-- Item details block -->
             <div class="col-sm border rounded shadow-sm m-1">
