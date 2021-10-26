@@ -41,7 +41,7 @@ function userLogin() {
         return;
     }
     else if (!(validatePassword(pwd))){
-        info.innerHTML = "Invalid password!";
+        info.innerHTML = "Invalid password!<br>Password must contain atleast 8 characters";
         return;
     }
 
@@ -51,7 +51,7 @@ function userLogin() {
     let xhr = new XMLHttpRequest();
     let url = api_host + '/auth/login';
     let data = `email=${email.value}&password=${pwd.value}`;
-    console.log(data);
+    // console.log(data);
     xhr.open('POST', url, true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
@@ -60,13 +60,15 @@ function userLogin() {
     // console.log("before");
     xhr.onload = () => {
         dict = JSON.parse(xhr.response);
-        console.log(dict);
+        console.log(typeof dict);
         // info.innerHTML = "Fetched!<br>" + xhr.response;
         if (xhr.status == 200){
             console.log("Status = 200 OK");
             sessionStorage.setItem('user_token', dict.token);
             sessionStorage.setItem('user_email', email.value);
             window.location.href = 'dashboard.html';
+        } else {
+            info.innerHTML = dict['message'];
         }
         
     }

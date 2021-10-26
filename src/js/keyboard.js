@@ -74,7 +74,7 @@ const Keyboard = {
                         ...row1, 
                         ...["caps"], ...row2, ...["enter"], 
                         ...row3, ...["_", ".", "@", "space", "done"]);
-        console.log(keyLayout);
+        // console.log(keyLayout);
         /*const keyLayout = [
             "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "backspace",
             "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",

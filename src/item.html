@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
     <link rel="stylesheet" href="css/item.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <script src="assets/fontawesome/js/all.js"></script>
     <script src="assets/bootstrap/js/bootstrap.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/item.js"></script>
   </head>
   <body onload="loadItem()">       
     <div class="container" id="">
@@ -20,70 +22,10 @@
             <a class="btn btn-secondary shadow-sm btn-sm mt-2 m-2 w-50" href="search_results.html" role="button"><i class="fas fa-arrow-left"></i> Back to results</a>
             <!-- <a class="btn btn-danger shadow-sm btn-sm mt-2 m-2 w-50" onclick="logout()" role="button"><i class="fas fa-sign-out-alt"></i> Logout</a> -->
         </div>
-        <div class="overlay"></div>
-        <div class="row shadow p-4" id='item-details'>
-            <!-- Item details block -->
-            <div class="col-sm border rounded shadow-sm m-1">
-                <div class="h2 mt-1">Item Name</div>
-                <div class="h3">Item ID</div>
-                <div class="">Item Description</div>
-                <div class="h5">Specifications</div>
-                <ul>
-                    <li>abc</li>
-                    <li>cde</li>
-                    <li>def</li>
-                    <li>efg</li>
-                </ul>
-                <pre>
-                    fd
-                    dwewe
-                    rqwrqw
-                    wqrqwrq
-                    rqw
-                    sfaasf
-                    afsfasf
-                    fasfaf
-                    sadad
-                </pre>
-            </div>
-
-            <!-- Side block for docs -->
-            <div class="col-sm">
-                <!-- Documentation links -->
-                <div class="border rounded shadow-sm m-1 mb-3">
-                    <div class="row d-flex align-items-center justify-content-center p-3">
-                        <div class="col doc-block text-center">
-                            <a href="javascript:showDatasheet()"><i class="fas fa-file-invoice h1 text-primary"></i></a>
-                            <div class="h6">Data Sheet</div>
-                        </div>
-                        <div class="col doc-block text-center">
-                            <i class="fab fa-youtube h1 text-danger"></i>
-                            <div class="h6">Video Tutorial</div>
-                        </div>
-                    </div>
-                    <div class="row d-flex align-items-center justify-content-center p-3">
-                        <div class="col doc-block text-center">
-                            <i class="fas fa-vial h1 text-success"></i>
-                            <div class="h6">Documentation</div>
-                        </div>
-                    </div>
-                </div>
+        <div id="overlay"></div>
+        <div class="row shadow p-4" id='item_details'>
                 
-
-                <!-- Navigation area -->
-                <div class="border rounded shadow-sm m-1">
-                    <div class="row d-flex align-items-center justify-content-center p-3">
-                        <div class="col doc-block text-center">
-                            <i class="fas fa-map-marked-alt h3 text-secondary"></i>
-                            <div class="h6">Locate</div>
-                        </div>
-                        <div class="nav-gif justify-content-center align-middle align-items-center d-flex">
-                            <img src="assets/img/cover2.gif" alt="" srcset="">
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+            
         </div>          
     </div>
     

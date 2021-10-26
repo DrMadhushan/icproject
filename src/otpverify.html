@@ -13,7 +13,7 @@
     <script src="js/package.js"></script>
     <script src="js/otpverify.js"></script>
   </head>
-  <body>
+  <body onload="func()">
     <div class="login-box shadow-lg">
       <div class="logo"><h1>MakerMate</h1></div>
       <div class="title">Verify using Maker App</div>
@@ -25,6 +25,8 @@
               <a class="btn btn-success btn-md shadow" onclick="verify()" role="button"><i class="fas fa-lock-open"></i> Unlock</a>
               <div>Not recieved? <a onclick="sendOTP()" style="cursor: pointer; color: rgb(6, 120, 250);"> Resend OTP</a></div>
             </form>
+            <a class="mt-5 btn btn-secondary btn-md shadow w-50" href="package.html" role="button"><i class="fas fa-arrow-left"></i> Back</a>
+              
       </div>
       <div class="info-box">
           Hello user!<br>

@@ -1,6 +1,6 @@
 function verify(){
     let user_otp = document.getElementById('passcode');
-    console.log(user_otp.value);
+    console.log("Current OTP = " + user_otp.value);
     
     let otp_req = 'http://127.0.0.1:8000/api/auth/user/orders/' + sessionStorage.getItem('req_package_id') + '/otp/' + user_otp.value;
     let xhr = new XMLHttpRequest();
@@ -20,4 +20,9 @@ function verify(){
     }
     
     //window.location.href = 'otpverify.html';
+}
+
+function func(){
+    let user_otp = sessionStorage.getItem('otp');
+    console.log("Current OTP = " + user_otp);
 }

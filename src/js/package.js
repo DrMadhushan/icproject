@@ -3,7 +3,7 @@ function initPackageView(){
     let package_block = document.getElementById('package_data');
 
     nav_right.innerHTML = `
-        <div class="profile p-3 pt-0 pb-0"> ${sessionStorage.getItem('user_email')}</div> 
+        <div class="profile p-3 pt-0 pb-0"> ${sessionStorage.getItem('user_email')}</div>
         <img src="${sessionStorage.getItem('avatar')}" width="30" height="30" class="d-inline-block align-text-top">
     `
 
@@ -15,11 +15,11 @@ function initPackageView(){
     xhr.open('GET', url);
     xhr.setRequestHeader('Authorization', 'Bearer ' + token);
     xhr.send();
-    xhr.onload = () => {  
+    xhr.onload = () => {
         console.log("In package.html");
         let package = JSON.parse(xhr.response);
-        console.log(package);  
-        package_block.innerHTML = 
+        console.log(package);
+        package_block.innerHTML =
         `
             <div class="text-success"><h4>Package ID MSPKG${package.id}</h4></div>
             <div>Order placed on ${package.ordered_date}</div>
@@ -51,7 +51,7 @@ function initPackageView(){
         // package_block.innerHTML += `
         // <div></div>
         // `;
-        
+
     }
 }
 
@@ -61,12 +61,12 @@ function sendOTP(){
     xhr.open('GET', otp_req);
     xhr.setRequestHeader('Authorization', 'Bearer ' + sessionStorage.getItem('user_token'));
     xhr.send();
-    xhr.onload = () => {  
+    xhr.onload = () => {
         console.log(xhr.response);
         sessionStorage.setItem('otp', xhr.response);
         window.location.href = 'otpverify.html';
     }
-    
+
     //window.location.href = 'otpverify.html';
 }
 
