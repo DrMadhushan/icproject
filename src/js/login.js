@@ -1,4 +1,3 @@
-const axios = require('axios');
 const { ipcRenderer } = require('electron');
 const ipc = ipcRenderer;
 const { readdir } = require('original-fs');
